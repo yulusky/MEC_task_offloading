@@ -1,0 +1,11 @@
+d = 0.001:0.001:1;
+path_loss = 128.1+37.6*log10(d);
+shadown_loss=normrnd(0,3,1,1000);
+big_loss=path_loss+shadown_loss;
+relay_loss=randn(1,1000)+randn(1,1000)*i;
+relay_loss_number=abs(relay_loss/sqrt(2));
+relay_loss_db=20*log10(relay_loss_number);
+all_loss=big_loss+relay_loss_db;
+%plot(x,h,'r');
+plot(d,path_loss,'r',d,big_loss,'g',d,all_loss,'b');
+%plot(x,y,'r',x,z,'g');
