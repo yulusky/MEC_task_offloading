@@ -14,7 +14,7 @@
 [all_loss_m_db,ak_db]=loss_all_big_DUE(100,3); 
 [all_loss_k_db,~]=loss_all_big_DUE(20,3);
 ak_db_arr=70+15.*rand(M,1);
-amk_db_arr=35+15.*rand(M,1);
+amk_db_arr=35+20.*rand(M,1);
 %ak=power(10,ak_db/10);
 %amk=power(10,amk_db/10);
 %使用db单位计算
