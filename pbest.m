@@ -13,8 +13,8 @@
 %路径损耗
 [all_loss_m_db,ak_db]=loss_all_big_DUE(100,3); 
 [all_loss_k_db,~]=loss_all_big_DUE(20,3);
-ak_db_arr=70+15.*rand(M,1);
-amk_db_arr=35+15.*rand(M,1);
+ak_db_arr=-40*rand(M,1);
+amk_db_arr=-80*rand(M,1);
 %ak=power(10,ak_db/10);
 %amk=power(10,amk_db/10);
 %使用db单位计算
@@ -43,7 +43,7 @@ for i=1:M
     ak_db=ak_db_arr(i);
     amk_db=amk_db_arr(i);
     fun=@(PKD) 10*log10((power(10,ak_db/10)*power(10,PKD/10)*1e-3/power(10,rd0_db/10)/power(10,amk_db/10)*...
-    (exp(-power(10,rd0_db/10)*power(10,N0_dbm/10)*1e-3/power(10,PKD/10)*1e-3/...
+    (exp(-power(10,rd0_db/10)*power(10,N0_dbm/10)/power(10,PKD/10)/...
     power(10,ak_db/10))/(1-p0)-1))*1e3)-PMC_max_dbm;
     PMC_max_PKD_max(i)=fun(PKD_max_dbm)+PMC_max_dbm;
     %dbm单位
