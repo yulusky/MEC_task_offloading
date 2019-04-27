@@ -5,9 +5,9 @@
 %基站与第k个DUE的信道增益
 [hkb,hkb_big]=loss_all_big_CUE(500,8);
 %第k个DUE之间的信道增益
-[hk,hk_big]=loss_all_big_DUE(70,3);
+[hk,hk_big]=loss_all_big_DUE(v,3);
 %第m个DUE与第k个CUE之间的信道增益
-[hmk,hmk_big]=loss_all_big_DUE(70,3);
+[hmk,hmk_big]=loss_all_big_DUE(v,3);
 %CUE最优信噪比计算
 rmc_mat=zeros(M,K);
 for i=1:M

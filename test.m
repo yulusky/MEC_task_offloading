@@ -1,5 +1,5 @@
-%初始化
-init;
+%调整参数
+v=120;
 %计算最优发射功率
 pbest;
 %构造信噪比矩阵
@@ -18,4 +18,5 @@ package;
 %em_all_best最低能耗
 %tm_all_best_sum总时延
 %em_all_best_sum总能耗
-
+tm_all_best_sum
+em_all_best_sum
